@@ -47,14 +47,14 @@ $("#identificacion").on("keyup", function () {
   }
 
   if (id.length != 9) {
-    texto = "Ingrese una cédula válida";
+    texto = "Ingrese una identificación válida";
   }
   if (!numero.test(id)) {
     $("#identificacion").val("");
-    texto = "Ingrese una cédula válida";
+    texto = "Ingrese una identificación válida";
   }
   if (id.length == 0 || id == "") {
-    texto = "Ingrese una cédula";
+    texto = "Ingrese una identificación";
   }
 
   $("#errorIden").text(texto);
@@ -93,19 +93,19 @@ $("#btnSolicitar").on("click", function () {
 
   texto = "";
   if (identificacion.length != 9) {
-    texto = "Ingrese una cédula válida";
+    texto = "Ingrese una identificación válida";
     $("#errorIden").text(texto);
     $(".text-informacion-req").removeClass("d-none");
     return false;
   }
   if (!numero.test(identificacion)) {
-    texto = "Ingrese una cédula válida";
+    texto = "Ingrese una identificación válida";
     $("#errorIden").text(texto);
     $(".text-informacion-req").removeClass("d-none");
     return false;
   }
   if (identificacion.length == 0 || identificacion == "") {
-    texto = "Ingrese una cédula";
+    texto = "Ingrese una identificación";
     $("#errorIden").text(texto);
     $(".text-informacion-req").removeClass("d-none");
     return false;
